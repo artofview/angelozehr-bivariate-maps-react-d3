@@ -4,14 +4,15 @@
   "private": true,
   "dependencies": {
     "@turf/bbox": "^6.0.1",
-    "d3-geo": "^1.11.6",
-    "d3-scale": "^3.2.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
+    "d3-geo": "^1.12.1",
+    "d3-scale": "^3.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.2.0",
     "shapefile": "^0.6.6",
-    "topojson-client": "^3.0.1",
-    "topojson-server": "^3.0.1"
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "yarn": "^1.22.5"
   },
   "scripts": {
     "start": "react-scripts start",

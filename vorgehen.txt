@@ -1,0 +1,10 @@
+https://entwickler.de/online/javascript/yarn-package-manager-javascript-295318.html
+
+yarn ist ein Package-Manager (https://yarnpkg.com/) und muss vorgänging installiert werden:
+npm install yarn
+-> node_modules/yarn
+
+installieren von "react" und "react-scripts":
+npm install react
+npm install react-scripts
+-> node_modules -> ca. 1000 neue module nach react-scripts 
