@@ -13,3 +13,14 @@ npm install react-scripts
 starten via:
 npm start
 -> startet in package.json definiertes script "react-scripts start" 
+
+
+
+=================================================================================================
+Stoppen von laufenden Prozessen auf Ports:
+netstat -ano | findstr :3000   
+-> Auflistung der Services via netstat und anschliessend via Pipe suche (findstr) nach 3000
+
+Kill Prozess:
+taskkill /PID 15940 /F
+-> via PID aus obigen Aufruf

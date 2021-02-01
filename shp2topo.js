@@ -3,8 +3,10 @@ var shapefile = require('shapefile')
 var topojson = require('topojson-server')
 
 // specify the output file here
-const inputFile = './gde-1-1-15.shp'
-const outputFile = './src/topo.json'
+//const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio_BEZIRKSGEBIET_LV95.shp'
+const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio_KANTONSGEBIET_LV95.shp'
+//const inputFile = './gde-1-1-15.shp'
+const outputFile = './src/topo.json'          //topojson-File
 
 shapefile
   .open(inputFile)
@@ -14,9 +16,13 @@ shapefile
       type: 'FeatureCollection',
       features: [] // into this array we push our features below
     }
+
+    console.log('TEST');
+
     return source.read().then(function log (result) {
       // when done: pass geojson to next function in promise pipeline
-      if (result.done) return geojson
+      if (result.done)
+        return geojson;
 
       // if not done: add to geojson feature by feature
       const feature = {
