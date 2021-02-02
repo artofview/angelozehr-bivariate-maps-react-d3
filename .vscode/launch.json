@@ -5,13 +5,41 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch via npm",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run-script", "shp2topo"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/src/App.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },  
+        /*      
+        {
             "type": "node",
             "request": "launch",
             "name": "Debug node run",
-            "debugServer": 3000,
-            //"url": "http://localhost:3001",
+            //"debugServer": 3000,           
             //"webRoot": "${workspaceFolder}"
-            "cwd": "${workspaceFolder}"
+            "program": "${workspaceFolder}\\src\\App.js"
+            //"cwd": "${workspaceFolder}"
         }
+        */
+
+        
     ]
 }

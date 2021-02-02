@@ -10,7 +10,7 @@ import relief from './relief.jpg'
 import topoJson from './topo.json'
 
 // convert topojson back to geojson
-const geoJson = topojsonFeature(topoJson, topoJson.objects.municipalities)
+const geoJson = topojsonFeature(topoJson, topoJson.objects.municipalities);
 
 const SwissMap = ({ data = [], width = 1000 }) => {
   // get extent of switzerland as x, y coordinates

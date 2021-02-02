@@ -1,0 +1,36 @@
+https://blog.az.sg/posts/mapping-switzerland-1/
+
+The Swiss Coordinate System
+The goal of this Tutorial is that we can work with geodata form the Federal Statistics Office. The keyword you google for is “Generalisierte Gemeindegrenzen”.
+You will land on this download page where you can choose for what year you want to download the data.
+
+Why is the year important?
+…you might ask yourself. Let me tell you: it’s very, very important. Borders are constantly changing – mainly because small municipalities choose to go together with their neighbors – they merge. This happens several times a year!
+
+👉🏼 If you have data that you want to display, you’ll need to find out with the exact status of municipalities it contains.
+This is usually specified in the metadata of a dataset. If it’s not, you’ll need to compare the number of municipalities in the dataset and in the different shapefiles.
+
+https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/geostat/geodaten-bundesstatistik/administrative-grenzen/generalisierte-gemeindegrenzen.assetdetail.15724821.html
+
+In the folder you downloaded you find usually find two folders, e.g. ggg_2017 and ggg_2017vz. VZ stands for “Volkszählung” (census) and means, the data is from the 31st of December of that year.
+The other folder contains data for the 1st of January. Within that folder, you navigate to /shp/LV95/. In there you’ll find groups of files (.cpg, .dbf, .prj, .shp and .shx).
+If you move these files around always take all 5 of them. If you rename them, rename all – they must always have the same name as they are interlinked.
+
+z.B. ag-b-00.03-875-gg20.zip\ggg_2020-LV95\shp
+
+The files starting with “g1” are more detailed (more fine-grained borders) that those with “g2”. The third letter indicates what kind of borders the file contains:
+
+g = Gemeinde (municipality)
+b = Bezirke (districts)
+k = Kanton (canton)
+l = Land (country)
+s = Seen (lakes)
+
+We want to show Gemeinden (municipalities) at the state of the 31st of December and we don’t need it in the most detailed form. g2g17.shp is this what we need.
+
+These are Swiss Coordinates (sometimes also called CH1903+, LV95 or EPSG:2056). What’s cool: 1 unit is equal to 1 meter.
+You may have only worked with what you might call “GPS Data”, where you have lat and a long that look something like 46.8066834, 6.7238481.
+
+In Switzerland, the numbers are called north and east or sometimes just Y and X (yes, actually in that order, as you can read on Wikipedia).
+
+Ok, we have the map that we want. But now we need to bring this shapefile into a format that browser understands better:
