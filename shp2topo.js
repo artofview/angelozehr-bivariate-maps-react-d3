@@ -4,9 +4,9 @@ var topojson = require('topojson-server');       // node_modules/topojson-server
 
 // specify the output file here
 // via: https://shop.swisstopo.admin.ch/de/products/landscape/boundaries3D
-// const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_BEZIRKSGEBIET_LV95.shp'
-// const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_KANTONSGEBIET_LV95.shp'
-//const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_HOHEITSGEBIET_LV95.shp'
+// const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_BEZIRKSGEBIET_LV95.shp'
+// const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_KANTONSGEBIET_LV95.shp'
+//const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_HOHEITSGEBIET_LV95.shp'
 // via: https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/geostat/geodaten-bundesstatistik/administrative-grenzen/generalisierte-gemeindegrenzen.assetdetail.15724821.html
 const inputFile = './gde-1-1-15.shp'
 

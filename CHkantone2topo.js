@@ -4,9 +4,9 @@ var topojson = require('topojson-server');       // node_modules/topojson-server
 
 // specify the output file here
 // via: https://shop.swisstopo.admin.ch/de/products/landscape/boundaries3D
-// const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_BEZIRKSGEBIET_LV95.shp'
-const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_KANTONSGEBIET_LV95.shp'
-//const inputFile = './shapefiles/SHAPEFILE_LV95/swissTLMRegio/swissTLMRegio_HOHEITSGEBIET_LV95.shp'
+// const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_BEZIRKSGEBIET_LV95.shp'
+// const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_KANTONSGEBIET_LV95.shp'
+const inputFile = './shapefiles/swissTLMRegio/SHAPEFILE_LV95/swissTLMRegio_HOHEITSGEBIET_LV95.shp'
 // via: https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/geostat/geodaten-bundesstatistik/administrative-grenzen/generalisierte-gemeindegrenzen.assetdetail.15724821.html
 //const inputFile = './gde-1-1-15.shp'
 
@@ -35,21 +35,18 @@ shapefile
       if (result.done)
         return geojson;
 
-      var i = 0;
-      if (result.value.properties.NAME === "Niederbipp")                  //bei "swissTLMRegio_HOHEITSGEBIET_LV95.shp"
-      // if (result.value.properties.Secondary_ === "Niederbipp")          //bei "gde-1-1-15.shp"
-          i++;
 
-      // if not done: add to geojson feature by feature -> Destructuring assignment
-      const feature = {
-        ...result.value,
-        // keep from properties only the bfs id
-        properties: {
-          bfsId: result.value.properties.BFS_ID
-        }
-      }      
-
-      geojson.features.push(feature);
+      //NUR CH-Gebiete...
+      if (result.value.properties.ICC === "CH") {                 //bei "swissTLMRegio_HOHEITSGEBIET_LV95.shp"
+          //NUR Fribourg
+          if (result.value.properties.KANTONSNUM === "CH10000000") { 
+              // if not done: add to geojson feature by feature -> Destructuring assignment
+              const feature = {
+                ...result.value
+              } 
+              geojson.features.push(feature);
+          }
+      }
 
       // continue with next feature/iteration
       return source.read().then(log);

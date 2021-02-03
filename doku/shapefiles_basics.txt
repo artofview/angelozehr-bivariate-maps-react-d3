@@ -18,6 +18,9 @@ https://opendata.swiss/de/dataset/swissboundaries3d
 Seit der Ausgabe 2016 enthält das Produkt swissBOUNDARIES3D zusätzlich die Grenzen des Datensatzes «swissTLMRegio».
 Diese Grenzen sind generalisiert und eignen sich für kleinmassstäbliche Darstellungen. Die Attribute von swissBOUNDARIES3D und swissTLMRegio Boundaries sind aufeinander abgestimmt.
 
+oder hier:
+https://www.bfs.admin.ch/bfs/de/home/statistiken/regionalstatistik/kartengrundlagen/basisgeometrien.html
+
 
 Shapefile:
 https://de.wikipedia.org/wiki/Shapefile
