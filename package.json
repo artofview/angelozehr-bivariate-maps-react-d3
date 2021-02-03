@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "shp2topo": "node shp2topo.js"
+    "shp2topo": "node shp2topo.js",
+    "CHkantone2topo": "node CHkantone2topo.js"
   },
   "eslintConfig": {
     "extends": "react-app"

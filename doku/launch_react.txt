@@ -15,6 +15,22 @@ npm start
 -> startet in package.json definiertes script "react-scripts start" 
 
 
+=================================================================================================
+Debuggen:
+https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f
+
+1. Definiton in launch.js
+    {
+        "name": "Launch react (SwissMap.js) via Chrome",
+        "request": "launch",
+        "type": "pwa-chrome",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/src"
+    }
+
+2. npm start
+-> Anschliessend wie Browser (F5)
+
 
 =================================================================================================
 Stoppen von laufenden Prozessen auf Ports:

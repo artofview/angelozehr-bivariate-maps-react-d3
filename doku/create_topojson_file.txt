@@ -26,6 +26,7 @@ npm install topojson-server
 -> von 1.1 MB auf ca. 0.8 MB mit topojson auf ca. 0.45 MB mit topojson und 1000 Quantization!
 
 
+=================================================================================================
 DEBUGGING:
 https://code.visualstudio.com/docs/nodejs/nodejs-debugging
 

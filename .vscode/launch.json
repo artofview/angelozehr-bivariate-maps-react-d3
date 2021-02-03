@@ -4,8 +4,10 @@
     // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        // für Debugging node -> shp2topo
         {
-            "name": "Launch via npm",
+            "name": "Launch node (shp2topo) via npm",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -13,33 +15,21 @@
             "runtimeArgs": ["run-script", "shp2topo"]
         },
         {
+            "name": "Launch node (CHkantone2topo) via npm",
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/src/App.js",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
-        },  
-        /*      
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug node run",
-            //"debugServer": 3000,           
-            //"webRoot": "${workspaceFolder}"
-            "program": "${workspaceFolder}\\src\\App.js"
-            //"cwd": "${workspaceFolder}"
-        }
-        */
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run-script", "CHkantone2topo"]
+        },      
 
-        
+        // für Debugging react -> SwissMap.js
+        {
+            "name": "Launch react (SwissMap.js) via Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/src"
+        },
     ]
 }
