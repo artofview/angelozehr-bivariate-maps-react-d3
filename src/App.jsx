@@ -7,8 +7,8 @@ function App () {
   
   return (
     <div>
-      {/* <SwissMap data={data} /> */}
-      <CHkantonMap data={data} />
+      <SwissMap data={data} />
+      {/* <CHkantonMap data={data} /> */ }
     </div>
   )
 }

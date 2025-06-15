@@ -1,3 +1,10 @@
 {
-    "liveServer.settings.port": 3001
+  "liveServer.settings.port": 3001,
+  "debug.javascript.usePreview": true,
+  "debug.javascript.debugByLinkOptions": "on",
+  "debug.openDebug": "openOnSessionStart",
+  "debug.javascript.autoAttachFilter": "always",
+  "debug.javascript.terminalOptions": {
+    "kind": "integrated"
+  }
 }

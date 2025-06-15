@@ -27,9 +27,17 @@
         {
             "name": "Launch react (SwissMap.js) via Chrome",
             "request": "launch",
-            "type": "pwa-chrome",
+            "type": "chrome",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}/src"
         },
+        {            
+            "request": "launch",
+            "name": "Vite + React Debug",
+            "type": "chrome",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMaps": true
+        }
     ]
 }

@@ -1,5 +1,11 @@
 # Bivariate maps with react and d3
 
+## Status
+
+Aktuell umgebaut nach "Vite" (da scheinbar react-scripts nicht mehr weiterentwickelt wird und Vite schneller ist)
+
+## Idee
+
 Read more about how to map Swiss coordinates (LV95, CH1903+) in these blog-posts:
 
 - [Mapping Swiss coordinates (LV95) with d3: Part 1](https://blog.az.sg/posts/mapping-switzerland-1/)
@@ -19,31 +25,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run dev`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm run build`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Builds the app for production to the `dist` folder.<br />
 
-### `yarn build`
+### `npm run preview`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs the app in the preview mode.<br />
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

@@ -1,0 +1,49 @@
+//https://www.dhiwise.com/post/vite-vs-create-react-app-which-is-the-better-choice
+//https://saurabhnativeblog.medium.com/vite-vs-create-react-app-choosing-the-right-tool-for-your-react-js-project-8824411247cd
+
+da "react-scripts" scheinbar seit 2022 nicht mehr gross weiterentwickelt wird und "vite" schneller zu sein schient -->
+https://dev.azure.com/markus-gruetter/home/_wiki/wikis/home.wiki/101/vite
+
+starten via:
+
+npm run dev 
+-> startet mit den Einstellungen welche in package.json unter "devDependencies" definiert sind
+
+npm run build
+-> Package wird gebuildet
+
+npm run preview
+-> Vorschau
+
+
+
+=================================================================================================
+Debuggen:
+
+1. Definiton in launch.js
+    {
+        "request": "launch",
+        "name": "Vite + React Debug",
+        "type": "chrome",
+        "url": "http://localhost:5173",
+        "webRoot": "${workspaceFolder}/src",
+        "sourceMaps": true
+    }
+
+2. npm run dev
+-> Applikation starten
+
+3. Debugger verbinden
+-> Ctrl+Shift+D -> "Vite + React Debug" auswählen
+
+4. Debuggen
+
+
+=================================================================================================
+Stoppen von laufenden Prozessen auf Ports:
+netstat -ano | findstr :3000   
+-> Auflistung der Services via netstat und anschliessend via Pipe suche (findstr) nach 3000
+
+Kill Prozess:
+taskkill /PID 15940 /F
+-> via PID aus obigen Aufruf
